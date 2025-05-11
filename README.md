@@ -27,4 +27,13 @@
 - [Spread Operator](./ES6/spreadOperator.md)
 - [For of/For in](./ES6/ForOf.md)
 
-## JavaScriptmas
+## JS
+
+- [String.replace](./Javascriptmas2024/README.md#stringreplace)
+- [Array.includes](./Javascriptmas2024/README.md#arrayincludes)
+- [forEach/map vs for... loop](./Javascriptmas2024/README.mdforeachmap-vs-for-loop)
+- [str.split() vs str.splice()](./Javascriptmas2024/README.md#strsplit-vs-strsplice)
+- [](./Javascriptmas2024/README.md)
+- [](./Javascriptmas2024/README.md)
+- [](./Javascriptmas2024/README.md)
+- [](./Javascriptmas2024/README.md)
