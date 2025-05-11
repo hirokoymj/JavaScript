@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form basic -2</title>
+</head>
+<body>
+<h3>Form Basic - Checkbox</h3>
+<form id="Form">
+    <select name="department" id="department" multiple="multiple">
+        <option value="HR">HR</option>
+        <option value="IT">IT</option>
+        <option value="Accounting">Accounting</option>
+    </select>
+    <hr>
+
+    <select name="skills" id="skills">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+    </select>
+    <hr>
+    <input type="submit" value="submit">
+</form>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dropdown.js"></script>
+<script>
+    $(document).ready(function(){
+        dropdownManager.init();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form basic -2</title>
+</head>
+<body>
+<h3>Form Basic - Checkbox</h3>
+<form id="hobbyForm">
+    <input type="checkbox" name="hobby" value="yoga" id="hobby_yoga" /><label for="hobby_yoga">Yoga</label>
+    <input type="checkbox" name="hobby" value="golf" id="hobby_golf"/><label for="hobby_golf">Golf</label>
+    <input type="checkbox" name="hobby" value="tennis" id="hobby_tennis"/><label for="hobby_tennis">tennis</label>
+    <input type="checkbox" name="hobby" value="soccer" id="hobby_soccer"/><label for="hobby_soccer">Soccer</label>
+    <hr>
+    <input type="submit" value="submit">
+</form>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="checkbox.js"></script>
+<script>
+    $(document).ready(function(){
+        checkboxManager.init();
+    });
+
+</script>
+</body>
+</html>

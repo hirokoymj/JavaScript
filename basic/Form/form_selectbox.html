@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sample</title>
+</head>
+<body>
+
+
+<form action="">
+    <select name="garden" id="garden">
+        <option>Flowers</option>
+        <option>Shrubs</option>
+        <option>Trees</option>
+        <option>Bushes</option>
+        <option>Grass</option>
+        <option>Dirt</option>
+    </select>
+</form>
+
+<input type="text" name="myText" id="myText"/>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+    $("#garden").on('change', function(){
+        var selected = $(this).val();
+        $('#myText').val(selected);
+    })
+
+//console.log($("#garden option:selected").text());
+
+</script>
+
+</body>
+</html>

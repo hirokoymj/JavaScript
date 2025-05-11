@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form basic -Radio button</title>
+</head>
+<body>
+<h3>Form - Radio button</h3>
+<form id="Form">
+    <div>Commute</div>
+    <input type="radio" name="commute" value="car" id="commute_car" /><label for="commute_car">car</label>
+    <input type="radio" name="commute" value="train" id="commute_train"/><label for="commute_train">train</label>
+    <input type="radio" name="commute" value="bus" id="commute_bus"/><label for="commute_bus">bus</label>
+    <hr>
+
+    <input type="submit" value="submit">
+</form>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="radio.js"></script>
+<script>
+    $(document).ready(function(){
+        radioManager.init();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="handlebars.js"></script>
+</head>
+<body>
+
+
+<div id="myHTML"></div>
+
+<script id="people-template" type="x-handlebars-template">
+    <h1>{{title}}</h1>
+    {{#people}}
+    <h1>{{name}}</h1>
+    <div>{{email}}</div>
+    <div>{{age}}</div>
+    {{/people}}
+</script>
+
+<script>
+$(document).ready(function(){
+
+    var source = $('#people-template').html();
+    var people_template = Handlebars.compile(source);
+    var data = {
+        title: 'Really cool people',
+        people: [
+            {
+                name: 'John',
+                age: 34,
+                email: 'john@gmail.com'
+            },
+            {
+                name: 'Sally',
+                age: 22,
+                email: 'sally12@gmail.com'
+            },
+            {
+                name: 'George',
+                age: 45,
+                email: 'george@hotmail.com'
+            }
+        ]
+    };
+    var people_html = people_template(data);
+    $('#myHTML').html(people_html);
+
+});
+</script>
+
+
+
+
+
+</body>
+</html>
