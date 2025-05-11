@@ -50,10 +50,23 @@
 - [Array.shift](./Javascriptmas2024/README.md#arrayshift)
 - [Quiz: day1-day23](./Javascriptmas2024/quiz.md)
 
+## Object
+
+- [Object.keys, values, entries](./Array/Object/README.md#objectkeys-values-entries)
+
+## Array
+
+- [Quiz](./Array/Quiz/README.md)
+
 ## Math
 
-- []()
+- [Downward](./Math/README.md#downward-to-the-nearest-integer)
+- [Upward](./Math/README.md#upward-to-the-nearest-integer)
+- [Round](./Math/README.md#round-the-nearest-integer)
+- [Is Integer or float?](./Math/README.md#is-integer-or-float)
+- [Find a float in Array](./Math/README.md#find-a-float-in-array)
+- [Find min/max number in Array](./Math/README.md#find-minmax-number-in-array)
 
 ## Date
 
-##
+- [Show tomorrow date](./Date/README.md#show-tomorrow-date)
