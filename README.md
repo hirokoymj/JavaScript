@@ -33,7 +33,27 @@
 - [Array.includes](./Javascriptmas2024/README.md#arrayincludes)
 - [forEach/map vs for... loop](./Javascriptmas2024/README.mdforeachmap-vs-for-loop)
 - [str.split() vs str.splice()](./Javascriptmas2024/README.md#strsplit-vs-strsplice)
-- [](./Javascriptmas2024/README.md)
-- [](./Javascriptmas2024/README.md)
-- [](./Javascriptmas2024/README.md)
-- [](./Javascriptmas2024/README.md)
+- [Array.slice](./Javascriptmas2024/README.md#arraysplice)
+- [this problem](./Javascriptmas2024/README.md#this-problem)
+- [Array.sort](./Javascriptmas2024/README.md#arraysort)
+- [HTML DOM selectors](./Javascriptmas2024/README.md#html-dom-selectors)
+- [Array.some() vs Array.includes()](./Javascriptmas2024/README.md#what-is-different-between-arraysome-and-arrayincludes)
+- [Math.random](./Javascriptmas2024/README.md#shuffle-array)
+- [Switch](./Javascriptmas2024/README.md#switch)
+- [for...in vs for...of](./Javascriptmas2024/README.md#forof-vs-forin)
+- [Return](./Javascriptmas2024/README.md#return)
+- [setinterval](./Javascriptmas2024/README.md#setinterval)
+- [Stop a timer](./Javascriptmas2024/README.md#stop-a-timer---clearinterval)
+- [Nested objects](./Javascriptmas2024/README.md#nested-object)
+- [Array.reduce](./Javascriptmas2024/README.md#arrayreduce)
+- [Array.join](./Javascriptmas2024/README.md#arrayjoin)
+- [Array.shift](./Javascriptmas2024/README.md#arrayshift)
+- [Quiz: day1-day23](./Javascriptmas2024/quiz.md)
+
+## Math
+
+- []()
+
+## Date
+
+##
