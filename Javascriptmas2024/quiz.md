@@ -406,6 +406,22 @@ document
 
 ## Quiz (day-9)
 
+**Q1:**
+
+```js
+const guest = {
+  name: "Alice",
+  loves: ["avocado", "quinoa", "kale"],
+};
+
+const recipes = [
+  {
+    name: "Honey-Glazed Ham",
+    ingredients: ["pork", "banana", "brown sugar", "kale", "butter"],
+  },
+];
+```
+
 **Q1 - Answer:**
 
 ```js

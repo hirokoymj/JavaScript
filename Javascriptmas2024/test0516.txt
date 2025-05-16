@@ -1,0 +1,28 @@
+//Q1 - Output ":cry:" to "cry".
+// const str = ":cry:";
+// const result = str.slice(1, -1);
+// console.log(result);
+
+//Q2 - :angry: is the emoji.
+const hackedEmojis = {
+  angry: "🎁", // 😠
+  thumbsdown: "👏", // 👎
+  man_facepalming: "🎅", // 🤦‍♂️
+  cry: "‍😄", // 😭
+  puke: "🤩", // 🤮
+};
+
+const emojifyWord = (str) => {
+  if (str.startsWith(":") && str.endsWith(":")) {
+    const text = str.slice(1, -1);
+    // Object.keys(hackedEmojis).forEach((key) => {
+    //   if (key === text) return hackedEmojis[key];
+    // });
+
+    for (const key in hackedEmojis) {
+      if (key === text) return hackedEmojis[key];
+    }
+  }
+  return str;
+};
+console.log(emojifyWord(":angry:"));
