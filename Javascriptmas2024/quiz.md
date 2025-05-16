@@ -672,11 +672,11 @@ console.log(output);
 
 ## Extra
 
-## How to update a value of object in array.
+## How to update a value of an object in the array.
 
 **Q1:**
 
-- Update an object value in array - id=2's name is "Lala".
+- The name of the data with ID 2 is "Lala".
 
 ```js
 let myArray = [
