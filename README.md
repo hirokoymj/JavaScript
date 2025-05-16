@@ -48,6 +48,7 @@
 - [Array.reduce](./Javascriptmas2024/README.md#arrayreduce)
 - [Array.join](./Javascriptmas2024/README.md#arrayjoin)
 - [Array.shift](./Javascriptmas2024/README.md#arrayshift)
+- [Update an object value in an array](./Javascriptmas2024/quiz.md#how-to-update-a-value-of-an-object-in-the-array)
 - [Quiz: day1-day23](./Javascriptmas2024/quiz.md)
 
 ## Object
