@@ -669,3 +669,43 @@ const output = santasArr.map((name) => {
 console.log(output);
 //["James", "Yi", "Florinda", "Fatima", "Tariq", "Jose", "Clare", "Gibbs"];
 ```
+
+## Extra
+
+**Q1:**
+
+- Update an object value in array - id=2's name is "Lala".
+
+```js
+let myArray = [
+  {id: 0, name: "Jhon"},
+  {id: 1, name: "Sara"},
+  {id: 2, name: "Domnic"},
+  {id: 3, name: "Bravo"}
+],
+```
+
+**Q1:answer**
+
+- Using ES6 (better)
+
+```js
+const newArray = myArray.map((data) =>
+  data.id === 2 ? { ...data, name: "lala" } : data
+);
+console.log(newArray);
+```
+
+- Using findIndex()
+
+```js
+const index = myArray.findIndex((obj) => obj.id === 2);
+myArray[index].name = "Lala";
+console.log(myArray);
+// [
+//   { id: 0, name: 'Jhon' },
+//   { id: 1, name: 'Sara' },
+//   { id: 2, name: 'Lala' },
+//   { id: 3, name: 'Bravo' }
+// ]
+```
