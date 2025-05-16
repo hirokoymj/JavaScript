@@ -237,7 +237,9 @@ const monthList = [
 ```
 
 **Q4: answer**
-
+- findIndex(callBack)
+- indexOf(value)
+  
 ```js
 months.sort((a, b) => (monthList.indexOf(a) < monthList.indexOf(b) ? -1 : 1));
 console.log(months); //[ 'Jan', 'Feb', 'March', 'Dec' ]
