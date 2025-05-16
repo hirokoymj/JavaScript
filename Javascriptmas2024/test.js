@@ -54,10 +54,20 @@ let myArray = [
   { id: 3, name: "Bravo" },
 ];
 
-const newArray = myArray.map((data) =>
-  data.id === 2 ? { ...data, name: "lala" } : data
-);
-console.log(newArray);
+const found = myArray.find((d) => d.id === 2);
+found.name = "Lala";
+console.log(myArray);
+// [
+//   { id: 0, name: 'Jhon' },
+//   { id: 1, name: 'Sara' },
+//   { id: 2, name: 'Lala' },
+//   { id: 3, name: 'Bravo' }
+// ]
+
+// const newArray = myArray.map((data) =>
+//   data.id === 2 ? { ...data, name: "lala" } : data
+// );
+// console.log(newArray);
 
 // const index = myArray.findIndex((obj) => obj.id === 2);
 // myArray[index].name = "Lala";

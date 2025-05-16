@@ -689,7 +689,21 @@ let myArray = [
 
 **Q1:answer**
 
-- Using ES6 (better)
+1. Use `Array.find()`
+
+```js
+const found = myArray.find((d) => d.id === 2);
+found.name = "Lala";
+console.log(myArray);
+// [
+//   { id: 0, name: 'Jhon' },
+//   { id: 1, name: 'Sara' },
+//   { id: 2, name: 'Lala' },
+//   { id: 3, name: 'Bravo' }
+// ]
+```
+
+2. Using ES6 spread operator (...)
 
 ```js
 const newArray = myArray.map((data) =>
@@ -698,16 +712,9 @@ const newArray = myArray.map((data) =>
 console.log(newArray);
 ```
 
-- Using findIndex()
+## Delete an object value in the array.
 
 ```js
-const index = myArray.findIndex((obj) => obj.id === 2);
-myArray[index].name = "Lala";
-console.log(myArray);
-// [
-//   { id: 0, name: 'Jhon' },
-//   { id: 1, name: 'Sara' },
-//   { id: 2, name: 'Lala' },
-//   { id: 3, name: 'Bravo' }
-// ]
+const index = state.findIndex((todo) => todo.id === action.payload);
+state.splice(index, 1);
 ```
