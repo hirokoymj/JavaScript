@@ -241,8 +241,16 @@ const monthList = [
 - indexOf(value)
   
 ```js
+//solution #1
 months.sort((a, b) => (monthList.indexOf(a) < monthList.indexOf(b) ? -1 : 1));
 console.log(months); //[ 'Jan', 'Feb', 'March', 'Dec' ]
+
+//solution #2
+months.sort((a, b) => {
+  const index_a = monthList.findIndex((data) => data === a);
+  const index_b = monthList.findIndex((data) => data === b);
+  return index_a < index_b ? -1 : 1;
+});
 ```
 
 ## Quiz (day-8)
