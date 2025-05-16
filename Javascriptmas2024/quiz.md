@@ -672,6 +672,8 @@ console.log(output);
 
 ## Extra
 
+## How to update a value of object in array.
+
 **Q1:**
 
 - Update an object value in array - id=2's name is "Lala".
