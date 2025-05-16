@@ -237,10 +237,20 @@ const monthList = [
 ```
 
 **Q4: answer**
-
+- findIndex(callBack)
+- indexOf(value)
+  
 ```js
+//solution #1
 months.sort((a, b) => (monthList.indexOf(a) < monthList.indexOf(b) ? -1 : 1));
 console.log(months); //[ 'Jan', 'Feb', 'March', 'Dec' ]
+
+//solution #2
+months.sort((a, b) => {
+  const index_a = monthList.findIndex((data) => data === a);
+  const index_b = monthList.findIndex((data) => data === b);
+  return index_a < index_b ? -1 : 1;
+});
 ```
 
 ## Quiz (day-8)
@@ -297,11 +307,9 @@ document
 
 ```js
 const word = "tree";
-const guessLetters = ["-", "-", "-", "-"]; // E -> ["-", "-", "E", "E"]
-document
-  .getElementById("keyboard-container")
-  .addEventListener("click", checkGuess);
-//<button class="letter" aria-label="Guess letter ${letter}" id=${letter}>${letter}</button>
+let guessLetters = ["-", "-", "-", "-"];
+const letter = "e";
+//Output ["-", "-", "e", "e"]
 ```
 
 **Q3:answer**
@@ -321,6 +329,19 @@ function checkGuess(e) {
     guessContainer.textContent = updates.join(" ");
   }
 }
+
+const word = "tree";
+let guessLetters = ["-", "-", "-", "-"];
+const letter = "e";
+
+if (word.includes(letter)) {
+  guessLetters = guessLetters.map((underscore, index) => {
+    return word[index] === letter ? letter : underscore;
+  });
+}
+
+console.log(guessLetters); // Output: ["-", "-", "e", "e"]
+
 ```
 
 **Q4:**
