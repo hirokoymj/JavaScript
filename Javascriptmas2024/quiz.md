@@ -237,9 +237,10 @@ const monthList = [
 ```
 
 **Q4: answer**
+
 - findIndex(callBack)
 - indexOf(value)
-  
+
 ```js
 //solution #1
 months.sort((a, b) => (monthList.indexOf(a) < monthList.indexOf(b) ? -1 : 1));
@@ -341,7 +342,6 @@ if (word.includes(letter)) {
 }
 
 console.log(guessLetters); // Output: ["-", "-", "e", "e"]
-
 ```
 
 **Q4:**
@@ -660,24 +660,21 @@ export const toysRequested = [
 **Q1:answer**
 
 ```js
-export const findMostRequestedToy = (toyRequests) => {
-  const toyCounts = toyRequests.reduce((acc, location) => {
-    location.toys.forEach((toy) => {
-      const toyName = Object.keys(toy)[0];
-      acc[toyName] = (acc[toyName] || 0) + toy[toyName];
-    });
-    return acc;
-  }, {});
-};
-findMostRequestedToy(toysRequested);
-// OUTPUT
-//{🚗 cars: 2500, 🪁 kites: 3500, 🎲 board games: 9000, 🎺 trumpets: 2000, 🧩 puzzles: 6500, 🛷 sleds: 2000, 🎨 art kits: 5500, 🔫 water guns: 5000, 🪆 nesting dolls: 4000, 🛹 skateboards: 2500, 🎮 video games: 2000, 🚀 rocket ships: 5000, 🐉 dragon figurines: 5000, 🧙‍♂️ wizard wands: 6500, 🏀 basketballs: 1000, 📚 coloring books: 4000}
+const flatten = toysRequested.reduce((acc, data) => {
+  data.toys.forEach((toy) => {
+    const toyName = Object.keys(toy)[0];
+    const amount = toy[toyName];
+    const isExist = acc.find((d) => d.hasOwnProperty(toyName));
 
-output.sort((a, b) => {
-  const toyA = Object.values(a)[0];
-  const toyB = Object.values(b)[0];
-  return toyB - toyA;
-});
+    if (isExist) {
+      isExist[toyName] += amount;
+    } else {
+      acc.push({ [toyName]: amount });
+    }
+  });
+  return acc;
+}, []);
+console.log(flatten);
 ```
 
 ## Quiz (day-23)
