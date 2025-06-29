@@ -18,14 +18,14 @@
 - `\S` - Non-white space character
 
 ```js
-const str = "Twas the night before Xmas...";
-const newstr = str.replace(/xmas/i, "Christmas");
+const str = 'Twas the night before Xmas...';
+const newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr); // Twas the night before Christmas...
 ```
 
 ```js
-const str = "talking      picture    frames.";
-const newstr = str.trim().replace(/\s+/g, " ");
+const str = 'talking      picture    frames.';
+const newstr = str.trim().replace(/\s+/g, ' ');
 console.log(str);
 console.log(`newstr: ${newstr}`); // talking picture frames.
 ```
@@ -39,10 +39,10 @@ const array1 = [1, 2, 3];
 
 console.log(array1.includes(2));
 
-const pets = ["cat", "dog", "bat"];
+const pets = ['cat', 'dog', 'bat'];
 
-console.log(pets.includes("cat")); //true
-console.log(pets.includes("lion")); // false
+console.log(pets.includes('cat')); //true
+console.log(pets.includes('lion')); // false
 ```
 
 <hr />
@@ -61,13 +61,13 @@ console.log(pets.includes("lion")); // false
 
 ```js
 const hackedEmojis = {
-  angry: "🎁", // 😠
-  thumbsdown: "👏", // 👎
-  man_facepalming: "🎅", // 🤦‍♂️
-  cry: "‍😄", // 😭
-  puke: "🤩", // 🤮
+  angry: '🎁', // 😠
+  thumbsdown: '👏', // 👎
+  man_facepalming: '🎅', // 🤦‍♂️
+  cry: '‍😄', // 😭
+  puke: '🤩', // 🤮
 };
-const key = "cry";
+const key = 'cry';
 
 //Use a for...in loop instead of forEach to allow early exit when the key is found.
 for (const key in hackedEmojis) {
@@ -94,7 +94,7 @@ for (const key in hackedEmojis) {
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
 ```js
-const months = ["Jan", "March", "April", "June"];
+const months = ['Jan', 'March', 'April', 'June'];
 const removed = months.splice(2, 1);
 console.log(removed); // Array ["April"]
 console.log(months); // Array ["Jan", "March", "June"]
@@ -188,19 +188,19 @@ sort((a, b) => a < b ? 1: -1)
 
 ```js
 //1.
-const sunglasses = document.querySelector(".sunglasses");
+const sunglasses = document.querySelector('.sunglasses');
 //2.
-const snowmanParts = document.querySelectorAll(".snowman-part");
+const snowmanParts = document.querySelectorAll('.snowman-part');
 //3.
-const guessContainer = document.getElementById("guess-container");
+const guessContainer = document.getElementById('guess-container');
 //4.
-document.querySelector(".sunglasses").style.visibility = "hidden";
+document.querySelector('.sunglasses').style.visibility = 'hidden';
 //5
-document.getElementById("guess-container").textContent = "You Win!";
-document.getElementById("guess-container").innerHTML = "<b>TEST</b>";
+document.getElementById('guess-container').textContent = 'You Win!';
+document.getElementById('guess-container').innerHTML = '<b>TEST</b>';
 document
-  .getElementById("keyboard-container")
-  .addEventListener("click", () => {});
+  .getElementById('keyboard-container')
+  .addEventListener('click', () => {});
 ```
 
 <hr />
@@ -228,16 +228,16 @@ Array.filter(callback); // returns Array or empty array
 - Check if at least one element finds in an array
 
 ```js
-const guest = { loves: "banana" };
-const hasLoved = ["apple", "banana", "mango", "guava"].some(
+const guest = { loves: 'banana' };
+const hasLoved = ['apple', 'banana', 'mango', 'guava'].some(
   (data) => data === guest.loves
 );
 console.log(hasLoved); // true
 ```
 
 ```js
-const guest = { dislike: ["kale", "tomato", "kiwi"] };
-const hasDisliked = ["apple", "banana", "mango", "guava"].some((data) =>
+const guest = { dislike: ['kale', 'tomato', 'kiwi'] };
+const hasDisliked = ['apple', 'banana', 'mango', 'guava'].some((data) =>
   guest.dislike.includes(data)
 );
 console.log(hasDisliked); //false
@@ -287,7 +287,7 @@ switch (expression) {
 const foo = 0;
 switch (foo) {
   case -1:
-    console.log("negative 1");
+    console.log('negative 1');
     break;
   case 0:
     console.log(0);
@@ -298,38 +298,36 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log("default");
+    console.log('default');
 }
 ```
 
 ## `for...of` vs `for...in`
 
-- [MDN - for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [MDN - for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
-- `for...of` - Array
-- `for...in` - Object
+- `for...in` - keys, Object=>keys, Array=>index
+- `for...of` - value - Array is ok, but cannot use Object
 
 ```js
-for (variable of iterable)
-```
+const myObject = { a: 1, b: 2, c: 3 };
+for (const key in myObject) {
+  console.log(key, myObject[key]); // Logs: "a 1", "b 2", "c 3"
+}
 
-```js
-const array1 = ["a", "b", "c"];
-
-for (const element of array1) {
-  console.log(element);
+const myArray = [10, 20, 30];
+for (const index in myArray) {
+  console.log(index, myArray[index]); // Logs: "0 10", "1 20", "2 30"
 }
 ```
 
 ```js
-for (variable in object)
-```
+const myArray = [10, 20, 30];
+for (const value of myArray) {
+  console.log(value); // Logs: 10, 20, 30
+}
 
-```js
-const object = { a: 1, b: 2, c: 3 };
-
-for (const key in object) {
-  console.log(`${key}: ${object[key]}`);
+const myString = 'hello';
+for (const char of myString) {
+  console.log(char); // Logs: "h", "e", "l", "l", "o"
 }
 ```
 
@@ -372,7 +370,7 @@ function correctChangeFromSanta(bills) {
 ```js
 // program to display a text using setInterval method
 function greet() {
-  console.log("Hello world");
+  console.log('Hello world');
 }
 
 setInterval(greet, 1000);
@@ -485,7 +483,7 @@ const result = workshopData.map((data) => {
 
 ```js
 const object1 = {
-  a: "somestring",
+  a: 'somestring',
   b: 42,
   c: false,
 };
@@ -505,52 +503,52 @@ const object1 = {
 ```js
 export default [
   {
-    item: "Bluetooth Speaker",
+    item: 'Bluetooth Speaker',
     price: 49.99,
     isGift: true,
   },
   {
-    item: "Office Chair",
+    item: 'Office Chair',
     price: 135.99,
     isGift: true,
   },
   {
-    item: "Gardening Gloves",
+    item: 'Gardening Gloves',
     price: 19.99,
     isGift: true,
   },
   {
-    item: "Moon Cheese",
+    item: 'Moon Cheese',
     price: 4.99,
     isGift: false,
   },
   {
-    item: "Lifetime supply of olives",
+    item: 'Lifetime supply of olives',
     price: 299.99,
     isGift: true,
   },
   {
-    item: "Pet Rock",
+    item: 'Pet Rock',
     price: 12.99,
     isGift: true,
   },
   {
-    item: "USB Cable",
+    item: 'USB Cable',
     price: 8.99,
     isGift: false,
   },
   {
-    item: "Banana Holder",
+    item: 'Banana Holder',
     price: 14.99,
     isGift: true,
   },
   {
-    item: "Can of Paint",
+    item: 'Can of Paint',
     price: 28.99,
     isGift: false,
   },
   {
-    item: "Novelty Hot Sauce",
+    item: 'Novelty Hot Sauce',
     price: 25.99,
     isGift: true,
   },
@@ -579,12 +577,12 @@ console.log(calculateCost(shoppingCartData)); //559.93
 - [Array.join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 
 ```js
-const elements = ["Fire", "Air", "Water"];
+const elements = ['Fire', 'Air', 'Water'];
 
 console.log(elements.join());
 // Expected output: "Fire,Air,Water"
 
-console.log(elements.join(""));
+console.log(elements.join(''));
 // Expected output: "FireAirWater"
 ```
 
@@ -613,7 +611,7 @@ export const addresses = [
 ```
 
 ```js
-const labelsContainer = document.querySelector(".labels-container");
+const labelsContainer = document.querySelector('.labels-container');
 
 const getRandomIndex = (array) => {
   const randomNum = Math.floor(Math.random() * array.length);
@@ -638,7 +636,7 @@ const generateLabel = (addressData) => {
             </section>`;
       return html;
     })
-    .join("");
+    .join('');
   return final;
 };
 
